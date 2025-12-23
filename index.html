@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Yadav | Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+        :root {
+            --bg: #05070a;
+            --accent: #00d2ff;
+            --card: #0f172a;
+            --text-p: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            line-height: 1.7;
+        }
+
+        /* Nav */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 10%; background: rgba(5, 7, 10, 0.8);
+            backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; }
+        .nav-links a { text-decoration: none; color: var(--text-p); margin-left: 25px; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #05070a 100%);
+        }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 800; margin-bottom: 10px; }
+        .hero p { color: var(--accent); font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        section { padding: 100px 10%; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; }
+        .section-header div { width: 50px; height: 4px; background: var(--accent); margin: 10px auto; border-radius: 2px; }
+
+        /* About Section */
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-text h3 { color: var(--accent); margin-bottom: 15px; }
+        .about-details { background: var(--card); padding: 30px; border-radius: 20px; border-left: 4px solid var(--accent); }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
+        .skill-item {
+            background: var(--card); padding: 25px; border-radius: 15px; text-align: center;
+            transition: 0.3s; border: 1px solid rgba(255,255,255,0.05);
+        }
+        .skill-item:hover { border-color: var(--accent); transform: scale(1.05); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2); }
+        .skill-item i { font-size: 2rem; display: block; margin-bottom: 10px; color: var(--accent); }
+
+        /* Projects */
+        .project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .project-card {
+            position: relative; border-radius: 20px; overflow: hidden; background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .project-info { padding: 30px; }
+        .project-info h4 { font-size: 1.4rem; margin-bottom: 10px; color: var(--accent); }
+        .project-info p { color: var(--text-p); font-size: 0.95rem; margin-bottom: 20px; }
+        .tags { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tags span { font-size: 0.7rem; background: rgba(0, 210, 255, 0.1); color: var(--accent); padding: 5px 12px; border-radius: 50px; }
+        
+        .view-btn {
+            text-decoration: none; color: white; font-size: 0.9rem; font-weight: 600;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .view-btn:hover { text-decoration: underline; }
+
+        footer { text-align: center; padding: 60px; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-p); }
+
+        @media (max-width: 768px) {
+            .about-content { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">ANIKET.Y</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p>Creative Web Developer</p>
+        <h1>Aniket Yadav</h1>
+    </section>
+
+    <section id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Transforming ideas into digital reality.</h3>
+                <p>I am a developer driven by the challenge of creating seamless digital experiences. With a background in Information Technology, I bridge the gap between complex backend logic and intuitive frontend design.</p>
+            </div>
+            <div class="about-details">
+                <p><strong>Education:</strong> B.Tech in IT</p>
+                <p><strong>Goal:</strong> Crafting high-performance web apps</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <div></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item"><span>HTML/CSS</span></div>
+            <div class="skill-item"><span>JavaScript</span></div>
+            <div class="skill-item"><span>React.js</span></div>
+            <div class="skill-item"><span>Node.js</span></div>
+            <div class="skill-item"><span>Tailwind CSS</span></div>
+            <div class="skill-item"><span>MongoDB</span></div>
+            <div class="skill-item"><span>Git/GitHub</span></div>
+            <div class="skill-item"><span>UI/UX</span></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <div></div>
+        </div>
+        <div class="project-container">
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="tags"><span>Java</span><span>SQL</span></div>
+                    <h4>File hider in java</h4>
+                    <p>A secure Java-based utility designed to encrypt and hiddenly store sensitive files from unauthorized system access.</p>
+                    </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="tags"><span>python</span><span>API</span></div>
+                    <h4>spam detection</h4>
+                    <p>An intelligent machine learning model designed to accurately filter unwanted spam from authentic text communications.</p>
+                    
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="tags"><span>react.js</span><span>node.js</span><span>Tailwind</span></div>
+                    <h4>Workhub(A job portal)</h4>
+                    <p>A streamlined platform connecting job seekers with employers through efficient search, filtering, and application management.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aniket Yadav. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
